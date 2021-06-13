@@ -1,7 +1,3 @@
 {
-    "proxies": {
-      "/*": {
-        "origin": "https://vershas-kitchen-services.herokuapp.com/"
-      }
-    }
+    "proxies":"https://vershas-kitchen-services.herokuapp.com/"
   }
