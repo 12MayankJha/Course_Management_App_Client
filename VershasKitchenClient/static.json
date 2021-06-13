@@ -5,7 +5,7 @@
     },
     "proxies": {
       "/api/": {
-        "origin": "https://vershas-kitchen-services.herokuapp.com/api/"
+        "origin": "https://vershas-kitchen-services.herokuapp.com/"
       }
     }
   }
