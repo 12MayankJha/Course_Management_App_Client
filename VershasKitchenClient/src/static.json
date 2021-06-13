@@ -1,11 +1,7 @@
 {
-    "root": "build/",
-    "routes": {
-      "/**": "index.html"
-    },
     "proxies": {
-      "/*": {
-        "origin": "https://vershas-kitchen-services.herokuapp.com/"
+      "/": {
+        "origin": "https://vershas-kitchen-services.herokuapp.com"
       }
     }
   }
