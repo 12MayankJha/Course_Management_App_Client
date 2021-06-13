@@ -9,6 +9,7 @@ import b2 from '../../assets/img/carousel_image2.jpg'
 
 const contextUrl = 'https://vershas-kitchen-services.herokuapp.com/'
 const path = "api/getAllPopularImageData"
+const api = "api/"
 
 class Popular extends Component {
 
@@ -62,7 +63,7 @@ class Popular extends Component {
                         {
                             cakes !== undefined && cakes.map(data => {
                                 return (
-                                    <Cards key={data.id} image={data.imagePath} name={data.name} price={data.price} />
+                                    <Cards key={data.id} image={api + data.imagePath} name={data.name} price={data.price} />
 
                                 )
                             })
@@ -79,7 +80,7 @@ class Popular extends Component {
                         {
                             snacks !== undefined && snacks.map(data => {
                                 return (
-                                    <Cards key={data.id} image={data.imagePath} name={data.name} price={data.price} />
+                                    <Cards key={data.id} image={api + data.imagePath} name={data.name} price={data.price} />
 
                                 )
                             })
