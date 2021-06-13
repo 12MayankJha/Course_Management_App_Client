@@ -8,7 +8,7 @@ import b1 from '../../assets/img/carousel_image1.jpg'
 import b2 from '../../assets/img/carousel_image2.jpg'
 
 const contextUrl = 'https://vershas-kitchen-services.herokuapp.com/'
-const path = "getAllPopularImageData"
+const path = "api/getAllPopularImageData"
 
 class Popular extends Component {
 
