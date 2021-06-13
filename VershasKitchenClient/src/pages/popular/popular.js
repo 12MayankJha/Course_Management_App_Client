@@ -20,7 +20,7 @@ class Popular extends Component {
     }
 
     componentDidMount() {
-        axios.get(contextUrl + path)
+        axios.get(path)
             .then((response) => (response.data))
             .then((data) => {
                 this.setState({ CardsData: data })
@@ -62,7 +62,7 @@ class Popular extends Component {
                         {
                             cakes !== undefined && cakes.map(data => {
                                 return (
-                                    <Cards key={data.id} image={data.imageURL} name={data.name} price={data.price} />
+                                    <Cards key={data.id} image={data.imagePath} name={data.name} price={data.price} />
 
                                 )
                             })
@@ -79,7 +79,7 @@ class Popular extends Component {
                         {
                             snacks !== undefined && snacks.map(data => {
                                 return (
-                                    <Cards key={data.id} image={data.imageURL} name={data.name} price={data.price} />
+                                    <Cards key={data.id} image={data.imagePath} name={data.name} price={data.price} />
 
                                 )
                             })
