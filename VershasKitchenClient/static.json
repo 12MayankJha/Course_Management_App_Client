@@ -3,13 +3,12 @@
     "/api/": {
       "origin": "https://vershas-kitchen-services.herokuapp.com/"
     }
-  }
-}
+  },
 
-{
   "root": "build/",
   "clean_urls": false,
   "routes": {
     "/**": "index.html"
   }
+
 }
