@@ -40,13 +40,6 @@
       "last 1 safari version"
     ]
   },
-    "proxy": {
-      "/api": {
-        "target": "https://vershas-kitchen-services.herokuapp.com",
-        "pathRewrite": {
-          "^/api": "/"
-        }
-      }
-    }
+    "proxy": "https://vershas-kitchen-services.herokuapp.com"
   
 }
