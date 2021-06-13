@@ -1,4 +1,5 @@
 {
+    "root": "index.html",
     "proxies": {
       "/api/": {
         "origin": "https://vershas-kitchen-services.herokuapp.com/api/"
