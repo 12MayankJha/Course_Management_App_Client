@@ -24,10 +24,6 @@ function App() {
      <Route exact path="/aboutus">
        <Aboutus/>
      </Route>
-    
-
-
-
      <Footer/>
    </Fragment>
   );
