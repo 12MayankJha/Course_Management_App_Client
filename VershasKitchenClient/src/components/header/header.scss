@@ -1,144 +1,167 @@
-.main-nav{
-    background-color: #775ae4;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-    box-shadow: 0 8px 6px -6px black;
+.main-nav {
+  background-color: #775ae4;
+  transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .header {
-    font-family: Arial, Helvetica, sans-serif;
-    /* padding: 10px 0px; */
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-    background-color: #775ae4;
-    margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding: 10px 0px; */
+  background-color: #775ae4;
+  margin-bottom: 5px;
 }
 
-.main-menu{ 
-    ul {
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.main-menu {
+  ul {
     margin: 10px;
     list-style-type: none;
-    float:right
-}
-    ul>li {
+    float: right;
+  }
+  ul > li {
     position: inherit;
     display: inline-block;
     vertical-align: middle;
-}
-    ul>li a {
-    line-height: 15px;
+  }
+  ul > li a {
+    line-height: 10px;
     font-size: 20px;
     display: block;
     font-weight: 500;
     color: white;
     padding: 15px 20px;
     border-radius: 10px;
-}
+    font-family: "Architects Daughter";
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
 
-    ul>li .active, ul>li .active:hover, li .active {
- color: white;
- background-color: black;
-}
+  ul > li .active,
+  ul > li .active:hover,
+  li .active {
+    color: white;
+    background-color: #3d3c4a;
+  }
 
-    ul>li a:hover {
-    color:#000;
-}
+  ul > li a:hover {
+    color: #000;
+  }
 }
 
 #header_img {
-    width: auto;
-    height: 65px;
+  width: auto;
+  height: 65px;
 }
 
-.mbrandName{
-    font-size: 15px;
-    color: #fff;
-    font-weight: 600;
-    
-  }
+.mbrandName {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Courgette";
+  letter-spacing: 1px;
+}
 
 nav.main-menu {
-    margin-left: 0;
+  margin-left: 0;
 }
 
-.brandName, .brandName a {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 10px;
-    padding-top: 8px;
+.brandName,
+.brandName a {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 5px;
+  padding-top: 10px;
+  font-family: "Courgette";
+  letter-spacing: 3px;
 }
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background-color: #775ae4;
-    overflow-x: hidden;
-    transition: 0.5s;
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: #775ae4;
+  overflow-x: hidden;
+  transition: 0.5s;
 
-  
   /* The navigation menu links */
-    a {
-    padding: 10px 8px 10px 50px;
+  a {
+    padding: 5px 10px 10px 50px;
     text-decoration: none;
     font-size: 20px;
     color: #fff;
     display: block;
     transition: 0.3s;
+    font-family: "Architects Daughter";
+    letter-spacing: 1px;
+    font-weight: 600;
   }
-  
+
   /* When you mouse over the navigation links, change their color */
-    a:hover {
+  a:hover {
     color: #f1f1f1;
   }
-  
-    .active {
-    background-color: black;
-}
+
+  .drawer {
+    width: 80%;
+    box-shadow: 2px 0px 13px 0px black;
+  }
+
   /* Position and style the close button (top right corner) */
-    .closebtn {
-    font-size: 36px;
+  .closebtn {
+    font-size: 30px;
     /* margin-left: 50px; */
     top: 0;
     left: 0;
     /* margin-left: auto; */
     margin-right: 30px;
+    margin-top: 5px;
     display: flex;
     justify-content: flex-end;
   }
-}
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
 
-  #main a{
-    color: #fff;
+  hr {
+    height: 3px;
+    opacity: 0.75;
   }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 25px;}
-  }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#main a {
+  color: #fff;
+}
 
 @media (max-width: 575px) {
-    .col-xs-3 {
-      flex: 0 0 auto;
-      width: 25%;
+  .col-xs-3 {
+    flex: 0 0 auto;
+    width: 25%;
   }
   .col-xs-6 {
     flex: 0 0 auto;
     width: 50%;
   }
+}
+
+@media (min-width: 768px) {
+  .menu-area-main .active {
+    background-color: black;
   }
-  
+}

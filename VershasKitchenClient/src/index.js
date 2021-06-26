@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import './assets/fonts/Courgette-Regular.ttf';
 
 ReactDOM.render(
   <BrowserRouter>

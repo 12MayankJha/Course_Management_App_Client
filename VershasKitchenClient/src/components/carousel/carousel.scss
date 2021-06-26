@@ -1,0 +1,24 @@
+#mainCarousel {
+    margin: 20px;
+  }
+  
+  .carousel-control-prev .sr-only,
+  .carousel-control-next .sr-only {
+    display: none;
+  }
+  .carousel-inner {
+    border-radius: 20px;
+    height: 200px;
+  }
+  @media screen and (min-width: 768px) {
+    #mainCarousel {
+      margin: 30px ;
+    }
+    .carousel-inner {
+      border-radius: 20px;
+      height: 500px;
+    }
+    .carousel-inner img {
+      height: 600px;
+    }
+  }

@@ -1,0 +1,9 @@
+{
+
+    "path" : {
+
+        "localcontextUrl" : "http://localhost:8080/",
+       "getPopularData" : "getAllPopularImageData"
+    }
+
+}

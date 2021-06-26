@@ -1,72 +1,49 @@
-.product-gallery{
-    /* padding-left: 5%;
+.product-gallery {
+  /* padding-left: 5%;
       padding-right: 5%; */
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-     -webkit-justify-content: center;
-      justify-content: center;
-      display: -webkit-flex;
-      display: flex;
-      margin-bottom: 20px;
-  }
-
- 
-  
-  @media screen and (min-width: 768px) {
-    #cakes{
-        background-image: url('../../assets/img/cake_background.png');
-        background-repeat: no-repeat;
-        text-align: center;
-    }
-    
-    #mocktails{
-        background-image: url('../../assets/img/beverage.png');
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: 160px;
-        margin-top: 15px;
-        text-align: center;
-    }
-  }
-
-  .seeMore{
-    background-color: #775ae4;
-   border-color: #775ae4;
-   margin-bottom: 20px;
-   padding: .5rem 1rem;
-    font-size: 1.25rem;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 400;
-    line-height: 1.5;
-    border: 1px solid transparent;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.seeMore:hover{
-    background-color: #ddd;
-    color: black;
-    border-color: #ddd;
+@media screen and (min-width: 767px) {
+  #cakes {
+    background-image: url("../../assets/img/cake_background.png");
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+  #snacks {
+    background-image: url("../../assets/img/beverage.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 160px;
+    text-align: center;
+  }
 }
 
-#mainCarousel {
-    margin: 20px;
-    
-  }
-  
-  .carousel-control-prev .sr-only, .carousel-control-next .sr-only {
-    display: none;
-  }
-  .carousel-inner{
-    border-radius: 20px;
-    height: 200px;
-  }
-  @media screen and (min-width: 768px) {
-    #mainCarousel {
-      margin: 65px;
-    }
-    .carousel-inner{
-      border-radius: 20px;
-      height: 410px;
-    }
-  }
-  
+.seeMore {
+  background-color: #775ae4;
+  border-color: #775ae4;
+  margin-bottom: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  font-family: "Architects Daughter";
+        letter-spacing: 3px;
+        font-weight: 600;
+}
+
+.seeMore:hover {
+  background-color: #ddd;
+  color: black;
+  border-color: #ddd;
+}
