@@ -56,14 +56,13 @@ class Header extends Component {
                 {/* Mobile Code */}
                 <div className=" header d-lg-none main-nav">
                     <div id="main">
-                        <div className="col-sm-3 col-xs-3 col-md-3 logo_section">
-                            <a className="closebtn" onClick={this.closeNav}><i class="fa fa-bars" style={{'font-size':'20px'}}aria-hidden="true"></i></a>
+                        <div className="col-sm-3 col-md-3 logo_section">
+                            <a className="closebtn" onClick={this.closeNav}><i className="fa fa-bars" style={{'fontSize':'20px'}} aria-hidden="true"></i></a>
                         </div>
-                        <div className="col-sm-6 col-xs-6 col-md-6 text-center" >
+                        <div className="col-sm-6 col-md-6 text-center" style={{'width':"80%"}}>
                             <label className='mbrandName'><NavLink exact to="/">Versha's Kitchen</NavLink></label></div>
-                        <div className="col-sm-3 col-xs-3 col-md-3"></div>
                     </div>
-                    <div id="mySidenav" className="sidenav" style={{ width: this.state.sideNav ? '0px' : '80%', 'box-shadow': this.state.sideNav ? '' : '2px 0px 13px 0px black'}}>
+                    <div id="mySidenav" className="sidenav" style={{ width: this.state.sideNav ? '0px' : '80%', 'boxShadow': this.state.sideNav ? '' : '2px 0px 13px 0px black'}}>
                         <a className="closebtn" onClick={this.closeNav}>&times;</a>
                         <NavLink onClick={this.closeNav} exact to="/" >Home</NavLink>
                         <NavLink onClick={this.closeNav} exact to="/aboutus" >About Us</NavLink>
@@ -72,6 +71,7 @@ class Header extends Component {
                         <NavLink onClick={this.closeNav} exact to="/" >Popular</NavLink>
                         <NavLink onClick={this.closeNav} exact to="/allcakes" >Cakes</NavLink>
                         <NavLink onClick={this.closeNav} exact to="/allsnacks">Snacks & Appetizers</NavLink>
+                        <NavLink onClick={this.closeNav} exact to="/alldesserts">Desserts</NavLink>
                         <NavLink onClick={this.closeNav} exact to="/others">Others</NavLink>
                         
                     </div>

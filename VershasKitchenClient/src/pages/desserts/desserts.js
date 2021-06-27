@@ -6,12 +6,12 @@ import Spinner from '../../components/spinner/spinner';
 const api = "api/"
 const path = api + 'getAllProducts'
 
-class SnacksAndAppetizers extends Component {
+class Desserts extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            SnacksAndAppetizersData: {}
+            DessertsData: {}
         };
     }
 
@@ -19,17 +19,16 @@ class SnacksAndAppetizers extends Component {
         axios.get(path)
             .then((response) => (response.data))
             .then((data) => {
-                this.setState({ SnacksAndAppetizersData: data.SnacksAndAppetizers })
+                this.setState({ DessertsData: data.Deserts })
             })
     }
 
     render() {
         return (
             <Fragment>
-                { Object.keys(this.state.SnacksAndAppetizersData).length ?
+                {Object.keys(this.state.DessertsData).length ?
                     <Fragment>
-                        <Section data={this.state.SnacksAndAppetizersData.BreadsAndMore} heading='Breads & More' />
-             <Section data={this.state.SnacksAndAppetizersData.Indian} heading='Indian' />
+                        <Section data={this.state.DessertsData.IndianDessert} heading='Indian Dessert' />
                     </Fragment>
                     :
                     <Spinner />
@@ -39,4 +38,4 @@ class SnacksAndAppetizers extends Component {
     }
 }
 
-export default SnacksAndAppetizers;
+export default Desserts;

@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import Section from '../../components/sections/section';
-
+import Spinner from '../../components/spinner/spinner';
 
 const api = "api/"
-const path = api+'getAllProducts';
+const path = api+'getAllProducts'
 
 class Cakes extends Component {
 
@@ -25,14 +25,18 @@ class Cakes extends Component {
 
 
     render() {
-        console.log(this.state.CakesData)
+        console.log('sdfs'+this.state)
         return (
             <Fragment>
-               { this.state.CakesData != undefined &&
+               { Object.keys(this.state.CakesData).length ?
                 <Fragment>
                 <Section data={this.state.CakesData.ClassicFlavourCakes} heading='Classic Flavour Cakes' id="cakes" />
                 <Section data={this.state.CakesData.FloralCakes} heading='Floral Cakes' id="cakes" />
                 </Fragment>
+                :
+                <div>
+                <Spinner />
+            </div>
                }
             </Fragment>
         )

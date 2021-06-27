@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import Section from '../../components/sections/section';
+import Spinner from '../../components/spinner/spinner';
 
 const api = "api/"
 const path = api+'getAllProducts';
@@ -23,10 +24,12 @@ class Others extends Component {
     render() {
         return (
             <Fragment>
-            { this.state.OthersData != undefined &&
+            { Object.keys(this.state.OthersData).length ?
              <Fragment>
              <Section data={this.state.OthersData.None} heading='Others' />
              </Fragment>
+             :
+             <Spinner />
             }
          </Fragment>
         );

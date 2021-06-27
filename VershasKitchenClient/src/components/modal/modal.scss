@@ -1,0 +1,43 @@
+.imagePopUpModal {
+    .modal-body {
+        padding: 0px;
+    }
+    
+    img {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .modal-content {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;       
+    }
+
+    .modal-footer {
+        padding: 5px 20px 10px 20px;
+    text-align: left;
+    justify-content: flex-start;
+    display: inline-block;
+    }
+
+    .modalTitle {
+        color: #775ae4;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    display: inline-block;
+    }
+
+    .modalText{
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        float: right;
+    }
+}

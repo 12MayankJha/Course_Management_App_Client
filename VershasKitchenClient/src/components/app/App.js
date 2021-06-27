@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../header/header';
 import Footer from '../footer/footer'
 import './App.css';
-import { Route, Router, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Popular from '../../pages/popular/popular';
 import Cakes from '../../pages/cakes/cakes';
 import ContactUs from '../../pages/contact-us/contact-us';
@@ -13,6 +13,7 @@ import Subnav from '../subnav/subnav';
 import Notfound from '../../pages/not-found/notfound';
 import SnacksAndAppetizers from '../../pages/snacksAndAppetizers/snacks-and-appetizers';
 import Others from '../../pages/others/others';
+import Desserts from '../../pages/desserts/desserts';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
      </Route>
      <Route exact path="/allsnacks">
      <SnacksAndAppetizers/>
+     </Route>
+     <Route exact path="/alldesserts">
+     <Desserts/>
      </Route>
      <Route exact path="/others">
      <Others/>
