@@ -28,7 +28,9 @@ class Desserts extends Component {
             <Fragment>
                 {Object.keys(this.state.DessertsData).length ?
                     <Fragment>
-                        <Section data={this.state.DessertsData.IndianDessert} heading='Indian Dessert' />
+                        <Section data={this.state.DessertsData.IndianDeserts} heading='Indian Dessert' />
+                        <Section data={this.state.DessertsData.IceCreams} heading='Icecreams' />
+                        
                     </Fragment>
                     :
                     <Spinner />
