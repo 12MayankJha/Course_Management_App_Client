@@ -1,6 +1,7 @@
 .imagePopUpModal {
     .modal-body {
         padding: 0px;
+        height: 450px;
     }
     
     img {
@@ -39,5 +40,13 @@
         font-size: 18px;
         font-weight: 600;
         float: right;
+    }
+}
+
+@media(max-width:768px) {
+    .imagePopUpModal {
+        .modal-body {
+            height: 300px;
+        }
     }
 }
