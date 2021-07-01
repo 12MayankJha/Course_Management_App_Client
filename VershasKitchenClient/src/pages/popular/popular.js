@@ -49,6 +49,7 @@ class Popular extends Component {
                         })
                     }
                 </Carousel> */}
+                <div className='popular-section'>
                 <Carousel id="mainCarousel">
                     <Carousel.Item interval={4000}>
                         {window.innerWidth < 500 ? <img className="d-block w-100" src={b1m} alt='b1' />
@@ -71,6 +72,7 @@ class Popular extends Component {
                     :
                     <Spinner />
                 }
+                </div>
             </Fragment>
         );
     }

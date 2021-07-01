@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import Section from '../../components/sections/section';
 import Spinner from '../../components/spinner/spinner';
+import './other.scss';
 
 const api = "api/"
 const path = api+'getAllProducts';
@@ -25,9 +26,9 @@ class Others extends Component {
         return (
             <Fragment>
             { Object.keys(this.state.OthersData).length ?
-             <Fragment>
+             <div className='others-cards'>
              <Section data={this.state.OthersData.None} heading='Others' />
-             </Fragment>
+             </div>
              :
              <Spinner />
             }

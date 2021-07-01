@@ -1,0 +1,37 @@
+.others-cards{
+    @media(max-width : 480px){
+        .card{
+                width: auto;
+        }
+    .lazyload-wrapper {
+        width: 50%;
+    }
+    .product-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        overflow-x: none;
+      }
+      .card-image {
+        height: 135px;
+    }
+    .card-body {
+        padding: 0px 10px 5px 10px;
+    }
+}
+
+@media(min-width : 481px) and (max-width:767px){
+    .lazyload-wrapper {
+        width: 33.33%;
+    }
+    .product-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        overflow-x: none;
+      }
+      .card-image {
+        height: 145px;
+    }
+}
+}

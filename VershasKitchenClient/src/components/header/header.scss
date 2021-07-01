@@ -9,6 +9,10 @@
   /* padding: 10px 0px; */
   background-color: #775ae4;
   margin-bottom: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .backdrop {
@@ -60,7 +64,7 @@
   height: 65px;
 }
 
-.logo_section{
+.logo_section {
   width: 10%;
   text-align: center;
 }

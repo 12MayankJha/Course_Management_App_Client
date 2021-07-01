@@ -71,6 +71,10 @@ font-weight: 700; */
 }
 
 @media(max-width : 768px){
+
+    .productCard {
+        margin-bottom: 10px;
+    }
     .card {
         width: 200px;
     }
