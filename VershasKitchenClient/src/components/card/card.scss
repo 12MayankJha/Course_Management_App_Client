@@ -41,7 +41,6 @@ font-weight: 700; */
     font-family: arial;
     border-radius: 20px;
     min-width: 90%;
-    width: 200px;
 }
 .card-text {
     color: #000;
@@ -72,6 +71,9 @@ font-weight: 700; */
 }
 
 @media(max-width : 768px){
+    .card {
+        width: 200px;
+    }
 
     .card-image {
         height: 165px;
