@@ -34,7 +34,7 @@ a,
   align-items: center;
   font-family: "Courgette";
   letter-spacing: 5px;
-  margin: 30px 0px 30px 0px;
+  margin: 30px 0px 20px 0px;
 }
 .breakHori::before,
 .breakHori::after {

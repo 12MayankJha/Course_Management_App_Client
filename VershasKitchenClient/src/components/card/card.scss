@@ -27,8 +27,11 @@
 font-weight: 700; */
     color: #775ae4;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
     margin: 10px 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -38,10 +41,11 @@ font-weight: 700; */
     font-family: arial;
     border-radius: 20px;
     min-width: 90%;
+    width: 200px;
 }
 .card-text {
     color: #000;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -57,9 +61,24 @@ font-weight: 700; */
     color: black;
 }
 
-.card:hover {
-    /* border:2px solid #775ae4; */
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-    transition: transform 0.4s ease, opacity 0.5s ease;
+
+@media(min-width : 769px){
+    .card:hover {
+        /* border:2px solid #775ae4; */
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+        transition: transform 0.4s ease, opacity 0.5s ease;
+    }
+}
+
+@media(max-width : 768px){
+
+    .card-image {
+        height: 165px;
+        width: 100%;
+    }
+    .card-body {
+        padding: 5px 10px 10px 10px;
+        text-align: left;
+    }
 }
