@@ -48,6 +48,7 @@
     -webkit-transition: .1s;
     -moz-transition: .1s;
   }
+
 }
   .social ul li {
     display: inline-block;
@@ -101,5 +102,47 @@
   }
 
   .faIcons {
+    font-size: 30px;
+  }
+
+  .dialler-icon{
+    position:fixed;
+    width:50px;
+    height:50px;
+    bottom: 50%;
+    right: 10px;
+    background-color:#0c58ca;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    z-index: 9;
+    box-shadow: 0px 0px 3px #999;
+    border: 1px solid black;
+  }
+
+  .whatsapp-icon{
+    position:fixed;
+    width:50px;
+    height:50px;
+    bottom: 40%;
+    right: 10px;
+    background-color:#25D366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    z-index: 9;
+    box-shadow: 0px 0px 3px #999;
+    border: 1px solid black;
+  }
+  
+  .dialler-icon:hover, .whatsapp-icon:hover {
+    color:#FFF;
+  }
+  .call-dialler{
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .whatsapp-dialler{
+    margin-top: 10px;
     font-size: 30px;
   }
