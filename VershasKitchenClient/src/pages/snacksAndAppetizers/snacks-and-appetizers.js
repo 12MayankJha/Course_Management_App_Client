@@ -1,38 +1,62 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+import Services from '../../services/Services';
 import Section from '../../components/sections/section';
 import Spinner from '../../components/spinner/spinner';
-
-const api = "api/"
-const path = api + 'getAllProducts'
 
 class SnacksAndAppetizers extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            SnacksAndAppetizersData: {}
+            SnacksAndAppetizersData: {},
+            subCategoryData: {}
         };
     }
 
     componentDidMount() {
-        axios.get(path)
-            .then((response) => (response.data))
-            .then((data) => {
-                this.setState({ SnacksAndAppetizersData: data.SnacksAndAppetizers })
-            })
+        if(this.props.category == 'allsnacks')
+        Services.getCategoryProducts().then((data) => {
+            this.setState({ SnacksAndAppetizersData: data.SnacksAndAppetizers })
+        })
+        else
+        Services.getSubCategoryProducts().then((data) => {
+            this.setState({ subCategoryData: data.SnacksAndAppetizers })
+        })
     }
 
     render() {
+        const category = this.props.category;
         return (
             <Fragment>
-                { Object.keys(this.state.SnacksAndAppetizersData).length ?
-                    <Fragment>
-                        <Section data={this.state.SnacksAndAppetizersData.BreadsAndMore} heading='Breads & More' />
-             <Section data={this.state.SnacksAndAppetizersData.Indian} heading='Indian' />
-                    </Fragment>
-                    :
-                    <Spinner />
+                {
+                    category == 'allsnacks' ?
+                        Object.keys(this.state.SnacksAndAppetizersData).length ?
+                            <div className='column-cards'>
+                                <Section data={this.state.SnacksAndAppetizersData} heading='Snacks & Appetizers' />
+                            </div>
+                            :
+                            <Spinner />
+                        : null
+                }
+                {
+                    category == 'breadsAndMore' ?
+                        Object.keys(this.state.subCategoryData).length ?
+                            <div className='column-cards'>
+                                <Section data={this.state.subCategoryData.BreadsAndMore} heading='Breads And More' />
+                            </div>
+                            :
+                            <Spinner />
+                        : null
+                }
+                 {
+                    category == 'indian' ?
+                        Object.keys(this.state.subCategoryData).length ?
+                            <div className='column-cards'>
+                                <Section data={this.state.subCategoryData.Indian} heading='Indian' />
+                            </div>
+                            :
+                            <Spinner />
+                        : null
                 }
             </Fragment>
         );

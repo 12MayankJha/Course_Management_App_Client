@@ -1,45 +1,67 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+import Services from '../../services/Services';
 import Section from '../../components/sections/section';
 import Spinner from '../../components/spinner/spinner';
-
-const api = "api/"
-const path = api+'getAllProducts'
 
 class Cakes extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            CakesData: {}
+            CakesData: {},
+            subCategoryData: {}
         };
     }
 
     componentDidMount() {
-        axios.get(path)
-            .then((response) => (response.data))
-            .then((data) => {
+        if (this.props.category == 'allcakes')
+            Services.getCategoryProducts().then((data) => {
                 this.setState({ CakesData: data.Cakes })
+            })
+        else
+            Services.getSubCategoryProducts().then((data) => {
+                this.setState({ subCategoryData: data.Cakes })
             })
     }
 
 
     render() {
-        console.log('sdfs'+this.state)
+        console.log(this.props.category)
+        const category = this.props.category;
         return (
             <Fragment>
-               { Object.keys(this.state.CakesData).length ?
-                <Fragment>
-                <Section data={this.state.CakesData.ClassicFlavourCakes} heading='Classic Flavour Cakes' id="cakes" />
-                <Section data={this.state.CakesData.FloralCakes} heading='Floral Cakes' id="cakes" />
-                </Fragment>
-                :
-                <div>
-                <Spinner />
-            </div>
-               }
+                {
+                    category == 'allcakes' ?
+                        Object.keys(this.state.CakesData).length ?
+                            <div className='column-cards'>
+                                <Section data={this.state.CakesData} heading='Cakes' />
+                            </div>
+                            :
+                            <Spinner />
+                        : null
+                }
+                {
+                    category == 'flavoured' ?
+                        Object.keys(this.state.subCategoryData).length ?
+                            <div className='column-cards'>
+                                <Section data={this.state.subCategoryData.ClassicFlavourCakes} heading='Classic Flavour Cakes' />
+                            </div>
+                            :
+                            <Spinner />
+                        : null
+                }
+                {
+                    category == 'floral' ?
+                        Object.keys(this.state.subCategoryData).length ?
+                            <div className='column-cards'>
+                                <Section data={this.state.subCategoryData.FloralCakes} heading='Floral Cakes' />
+                            </div>
+                            :
+                            <Spinner />
+                        : null
+                }
             </Fragment>
-        )
+        );
     }
 }
 

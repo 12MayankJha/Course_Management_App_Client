@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import {BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+import {BrowserView, MobileView } from "react-device-detect";
+import { NavLink } from 'react-router-dom'
 import './footer.scss';
 
 const Footer = () => {
@@ -21,33 +22,34 @@ const Footer = () => {
             <div className="footer">
                 <div className="contain">
                     <div className="col">
-                        <h1>Company</h1>
+                        <h1>Home</h1>
                         <ul>
-                            <li>About</li>
+                            <li>Popular</li>
                         </ul>
                     </div>
                     <div className="col">
-                        <h1>Products</h1>
+                        <h1>Cakes</h1>
                         <ul>
-                            <li>About</li>
+                       <li><NavLink exact to="/classic-flavour-cakes">Classic Flavour Cakes</NavLink></li> 
+                       <li><NavLink exact to="/floral-cakes">Floral Cakes</NavLink></li> 
                         </ul>
                     </div>
                     <div className="col">
-                        <h1>Accounts</h1>
+                        <h1>Desserts</h1>
                         <ul>
-                            <li>About</li>
+                        <li><NavLink exact to="/floral-cakes">Floral Cakes</NavLink></li> 
                         </ul>
                     </div>
                     <div className="col">
-                        <h1>Resources</h1>
+                        <h1>About</h1>
                         <ul>
-                            <li>Webmail</li>
+                        <NavLink exact to="/aboutus" >About Us</NavLink>
                         </ul>
                     </div>
                     <div className="col">
                         <h1>Support</h1>
                         <ul>
-                            <li>Contact us</li>
+                        <NavLink exact to="/contactus" >Contact Us</NavLink>
                         </ul>
                     </div>
                     <div className="col social">
