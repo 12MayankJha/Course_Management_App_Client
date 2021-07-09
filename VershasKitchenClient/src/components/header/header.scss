@@ -1,11 +1,4 @@
-.main-nav {
-  background-color: #775ae4;
-  transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-  box-shadow: 0 8px 6px -6px black;
-}
-
 .header {
-  font-family: Arial, Helvetica, sans-serif;
   /* padding: 10px 0px; */
   background-color: #775ae4;
   margin-bottom: 5px;
@@ -13,6 +6,25 @@
   top: 0;
   width: 100%;
   z-index: 999;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.brandName,
+.brandName a {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px;
+  font-family: "Courgette";
+  letter-spacing: 3px;
+}
+
+.mbrandName {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Courgette";
+  letter-spacing: 1px;
 }
 
 .backdrop {
@@ -25,26 +37,28 @@
 
 .main-menu {
   ul {
-    margin: 10px;
     list-style-type: none;
     float: right;
+    margin: 0px;
+    padding: 15px 10px;
   }
   ul > li {
     position: inherit;
     display: inline-block;
     vertical-align: middle;
   }
+
   ul > li a {
     line-height: 10px;
     font-size: 20px;
-    display: block;
+    //display: block;
     font-weight: 500;
     color: white;
-    padding: 15px 20px;
     border-radius: 10px;
     font-family: "Architects Daughter";
     letter-spacing: 1px;
     font-weight: 600;
+    margin-right: 5px;
   }
 
   ul > li .active,
@@ -54,123 +68,132 @@
     background-color: #3d3c4a;
   }
 
-  ul > li a:hover {
+  .nav-more-button a:hover,
+  .nav-more-content a:hover {
     color: #000;
+  }
+  .nav-more-button a {
+    color: white;
+    padding: 8px;
+  }
+
+  .nav-more-button {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    // padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-family: "Architects Daughter";
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .nav-more-content {
+    display: none;
+    position: absolute;
+    background-color: #775ae4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    padding: 5px;
+    z-index: 9;
+  }
+  .nav-more-content a {
+    float: block;
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .nav-more:hover .nav-more-content {
+    display: block;
   }
 }
 
-#header_img {
-  width: auto;
-  height: 65px;
+.mobile-nav {
+  background-color: #775ae4;
+  transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  transition: margin-left 0.5s;
+  #main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  a {
+    color: #fff;
+  }
+
+  /* The side navigation menu */
+  .sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    hr {
+      height: 3px;
+      opacity: 0.75;
+    }
+
+    a,
+    .dropdown-btn {
+      padding: 5px 10px 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #333;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      font-family: "Architects Daughter";
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .dropdown-container a{
+      color: #000;
+    }
+
+    .dropdown-container {
+      display: none;
+      padding-left: 10px;
+    }
+
+    .fa-caret-down, .fa-close {
+      float: right;
+      padding-right: 8px;
+      padding-top: 5px;
+    }
+
+
+    .closebtn {
+      /* margin-left: 50px; */
+      top: 0;
+      left: 0;
+      /* margin-left: auto; */
+      margin-right: 30px;
+      padding: 15px;
+      background-color: #775ae4;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }
 
 .logo_section {
   width: 10%;
   text-align: center;
-}
-
-.mbrandName {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-  font-family: "Courgette";
-  letter-spacing: 1px;
-}
-
-nav.main-menu {
-  margin-left: 0;
-}
-
-.brandName,
-.brandName a {
-  color: #fff;
-  font-size: 25px;
-  font-weight: 600;
-  margin: 5px;
-  padding-top: 10px;
-  font-family: "Courgette";
-  letter-spacing: 3px;
-}
-
-/* The side navigation menu */
-.sidenav {
-  height: 100%;
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 0;
-  background-color: #775ae4;
-  overflow-x: hidden;
-  transition: 0.5s;
-
-  /* The navigation menu links */
-  a {
-    padding: 5px 10px 10px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-    font-family: "Architects Daughter";
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
-
-  /* When you mouse over the navigation links, change their color */
-  a:hover {
-    color: #f1f1f1;
-  }
-
-  .drawer {
-    width: 80%;
-    box-shadow: 2px 0px 13px 0px black;
-  }
-
-  /* Position and style the close button (top right corner) */
-  .closebtn {
-    font-size: 30px;
-    /* margin-left: 50px; */
-    top: 0;
-    left: 0;
-    /* margin-left: auto; */
-    margin-right: 30px;
-    margin-top: 5px;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  hr {
-    height: 3px;
-    opacity: 0.75;
-  }
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 10px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-#main a {
-  color: #fff;
-}
-
-@media (max-width: 575px) {
-  .col-xs-3 {
-    flex: 0 0 auto;
-    width: 25%;
-  }
-  .col-xs-6 {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-}
-
-@media (min-width: 768px) {
-  .menu-area-main .active {
-    background-color: black;
-  }
 }

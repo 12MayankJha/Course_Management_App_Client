@@ -8,7 +8,7 @@ const Section = ({ data, heading, id, seeMore, href }) => {
             {
                 data && data.length > 0 &&
                 <div id={id} className="text-center">
-                    <div className='breakHori'>{heading}</div>
+                    <div className='sectionDivider'>{heading}</div>
                     <div className="product-gallery">
                         {
                             data !== undefined ? data.map(val => {
