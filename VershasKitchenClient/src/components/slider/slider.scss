@@ -1,0 +1,41 @@
+.product-section {
+    display: flex;
+}
+.slider-buttons {
+    font-size: 40px;
+    position: absolute;
+    z-index: 1;
+    left: 1%;
+    cursor: pointer;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.slider-buttons:nth-of-type(2) {
+    left: 97%;
+}
+
+.product-section {
+    flex-wrap: nowrap;
+    justify-content: left;
+
+    overflow-x: auto;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .slider-buttons {
+        display: none;
+    }
+
+    .product-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

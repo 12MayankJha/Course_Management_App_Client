@@ -28,7 +28,7 @@ const Cards = (props) => {
 
     return (
         <LazyLoad once={true} offset={[-100, 100]} key={props.key} height={200} >
-            <Card className="productCard" onClick={modal}>
+            <Card onClick={modal}>
                 <div className="card-image"><Card.Img ref={(img) => { imgRef = img; }} variant="top" src={props.image} /></div>
                 <Card.Body className="card-body">
                     <Card.Title ref={(imgName) => { imgNameRef = imgName; }} className="cardTitle"> {props.name} </Card.Title>

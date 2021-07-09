@@ -1,30 +1,12 @@
 .card-img,
 .card-img-top {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    // clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
 }
-
 .card-img-top {
     height: 100%;
     width: 100%;
 }
-
-.card-body {
-    padding: 5px 20px 10px 20px;
-    text-align: left;
-}
-
-.card-image {
-    height: 240px;
-    width: 278px;
-}
-
 .cardTitle {
-    /* font-size: 20px;
-font-weight: 700; */
     color: #775ae4;
     font-weight: 600;
     font-size: 15px;
@@ -33,58 +15,140 @@ font-weight: 700; */
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 280px;
-    /* margin: auto; */
-    text-align: center;
-    font-family: arial;
-    border-radius: 20px;
-    min-width: 90%;
-}
+
 .card-text {
     color: #000;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 5px;
 }
-.productCard {
-    /* padding: 10px; */
-    // border-radius: 10px;
-    margin: 10px;
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 15px;
     margin-bottom: 25px;
 }
-
-.productCard a,
-.productCard a:hover {
-    color: black;
+.card-image {
+    height: 240px;
+    width: 280px;
+}
+.card-body {
+    padding: 5px 20px 10px 20px;
+    text-align: left;
 }
 
+//css for cards in column
+.column-cards {
+    .product-gallery {
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+        display: -webkit-flex;
+        display: flex;
+        margin: 0px 30px 20px 30px;
+    }
+}
 
-@media(min-width : 769px){
+//css for cards slider
+.slider-cards {
+    .product-gallery {
+        flex-wrap: nowrap;
+        justify-content: left;
+        display: flex;
+        overflow-x: auto;
+        margin: -10px 100px 20px 100px;
+        padding-top: 10px;
+        position: relative;
+    }
+}
+
+.product-gallery::-webkit-scrollbar,
+.product-section::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 769px) {
     .card:hover {
         /* border:2px solid #775ae4; */
         transform: scale(1.1);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
         transition: transform 0.4s ease, opacity 0.5s ease;
     }
+
+    //     #cakes {
+    //         background-image: url("../../assets/img/cake_background.png");
+    //         background-repeat: no-repeat;
+    //         text-align: center;
+    //     }
+
+    //     #snacks {
+    //         background-image: url("../../assets/img/beverage.png");
+    //         background-repeat: no-repeat;
+    //         background-position: right;
+    //         background-size: 160px;
+    //         text-align: center;
+    //     }
 }
 
-@media(max-width : 768px){
-
-    .productCard {
-        margin-bottom: 10px;
-    }
+@media (max-width: 768px) {
     .card {
         width: 200px;
+        margin-bottom: 10px;
+        margin: 10px;
     }
-
     .card-image {
         height: 165px;
         width: 100%;
     }
-    .card-body {
-        padding: 5px 10px 10px 10px;
-        text-align: left;
+
+    //css for cards slider
+    .slider-cards {
+        .product-gallery {
+            margin: 0px 0px 20px 0px;
+            padding-top: 0px;
+        }
+    }
+
+    //css for cards in column
+    .column-cards {
+        .product-gallery {
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            margin: 0px 10px 20px 10px;
+            padding-top: 0px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    //css for cards in column
+    .column-cards {
+        .lazyload-wrapper {
+            width: 50%;
+        }
+        .card {
+            width: auto;
+        }
+        .card-image {
+            height: 130px;
+        }
+        .card-body {
+            padding: 0px 10px 5px 10px;
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    //css for cards in column
+    .column-cards {
+        .lazyload-wrapper {
+            width: 33.33%;
+        }
+        .card-image {
+            height: 145px;
+        }
     }
 }
