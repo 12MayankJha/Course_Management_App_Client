@@ -137,7 +137,7 @@
     z-index: 200;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #f6f6f6;
     overflow-x: hidden;
     transition: 0.5s;
 
@@ -148,9 +148,9 @@
 
     a,
     .dropdown-btn {
-      padding: 5px 10px 10px 20px;
+      padding: 5px 10px 5px 20px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 15px;
       color: #333;
       display: block;
       border: none;
@@ -159,36 +159,48 @@
       text-align: left;
       cursor: pointer;
       outline: none;
-      font-family: "Architects Daughter";
+      //font-family: "Architects Daughter";
       letter-spacing: 1px;
-      font-weight: 600;
+      font-weight: 500;
     }
-    .dropdown-container a{
+    .dropdown-container a {
       color: #000;
+      font-size: 12px;
     }
 
     .dropdown-container {
       display: none;
-      padding-left: 10px;
+      margin: 5px 15px;
+      background-color: #775ae466;
+      border-radius: 20px;
+      padding: 5px 0px;
     }
 
-    .fa-caret-down, .fa-close {
+    .fa-caret-down,
+    .fa-close {
       float: right;
       padding-right: 8px;
       padding-top: 5px;
     }
 
-
     .closebtn {
       /* margin-left: 50px; */
       top: 0;
       left: 0;
-      /* margin-left: auto; */
+      font-size: 20px;
       margin-right: 30px;
-      padding: 15px;
-      background-color: #775ae4;
-      display: flex;
+      margin-bottom: 5px;
+      //margin-top: 5px;
       justify-content: flex-end;
+      background-color: #775ae4;
+      padding: 10px;
+      color: #fff;
+    }
+
+    #sideNav-logo {
+      width: 35px;
+      height: 35px;
+      margin-left: 10px;
     }
   }
 }

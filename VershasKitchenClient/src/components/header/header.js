@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './header.scss';
-import { NavLink } from 'react-router-dom'
-import Subnav from '../subnav/subnav';
+import { NavLink } from 'react-router-dom';
+import logo from '../../assets/img/logo.png';
 
 class Header extends Component {
     constructor(props) {
@@ -132,27 +132,30 @@ class Header extends Component {
                         </div>
                         <div id="mySidenav" className="sidenav" style={{ width: this.state.sideNav ? '0px' : '80%', 'boxShadow': this.state.sideNav ? '' : '2px 0px 13px 0px black' }}>
                             {/* <a className="closebtn" onClick={this.closeNav}>&times;</a> */}
-                            <button className="dropdown-btn closebtn" onClick={this.closeNav}><i class="fa fa-close"></i></button>
-                            <NavLink onClick={this.closeNav} exact to="/" activeClassName="active">Home</NavLink>
-                            <NavLink onClick={this.closeNav} exact to="/aboutus" activeClassName="active">About Us</NavLink>
-                            <NavLink onClick={this.closeNav} exact to="/contactus" activeClassName="active">Contact Us</NavLink>
+                            <button className="dropdown-btn closebtn" onClick={this.closeNav}><img id="sideNav-logo" src={logo} alt="versha's kitchen"/><i class="fa fa-close"></i></button>
+                            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                            <NavLink exact to="/aboutus" activeClassName="active">About Us</NavLink>
+                            <NavLink exact to="/contactus" activeClassName="active">Contact Us</NavLink>
                             <hr />
-                            <NavLink onClick={this.closeNav} exact to="/" activeClassName="active">Popular</NavLink>
+                            <NavLink exact to="/" activeClassName="active">Popular</NavLink>
                             <button class="dropdown-btn">Cakes <i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-container">
-                                <NavLink onClick={this.closeNav} exact to="/classic-flavour-cakes">Classic Flavour Cakes</NavLink>
-                                <NavLink onClick={this.closeNav} exact to="/floral-cakes">Floral Cakes</NavLink>
+                                <NavLink exact to="/allcakes">All Cakes</NavLink>
+                                <NavLink exact to="/classic-flavour-cakes">Classic Flavour Cakes</NavLink>
+                                <NavLink exact to="/floral-cakes">Floral Cakes</NavLink>
                             </div>
                             <button class="dropdown-btn">Snacks & Appetizers<i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-container">
-                                <NavLink onClick={this.closeNav} exact to="/breads-and-more" >Breads & More</NavLink>
-                                <NavLink onClick={this.closeNav} exact to="/indian" >Indian</NavLink>
+                                <NavLink exact to="/allsnacks" >All Snacks & Appetizers</NavLink>
+                                <NavLink exact to="/breads-and-more" >Breads & More</NavLink>
+                                <NavLink exact to="/indian" >Indian</NavLink>
                             </div>
                             <button class="dropdown-btn">Desserts<i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-container">
-                                <NavLink onClick={this.closeNav} exact to="/indian-dessert">Indian Dessert</NavLink>
+                                <NavLink exact to="/alldesserts">All Desserts</NavLink>
+                                <NavLink exact to="/indian-dessert">Indian Dessert</NavLink>
                             </div>
-                            <NavLink onClick={this.closeNav} exact to="/others" activeClassName="active">Others</NavLink>
+                            <NavLink exact to="/others" activeClassName="active">Others</NavLink>
                         </div>
                     </div>
                 </div>
