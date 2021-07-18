@@ -61,6 +61,7 @@ class Popular extends Component {
                             <div className='slider-cards'>
                                 <Slider data={this.state.CardsData.Cakes} heading='Cakes' id="cakes" seeMore={true} href="/allcakes" />
                                 <Slider data={this.state.CardsData.SnacksAndAppetizers} heading='Snacks & Appetizers' seeMore={true} href="/allsnacks" />
+                                <Slider data={this.state.CardsData.Deserts} heading='Desserts' seeMore={true} href="/alldesserts" />
                                 <Slider data={this.state.CardsData.Others} heading='Others' seeMore={true} href="/others" />
                             </div>
                         </Fragment>
